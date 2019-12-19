@@ -38,7 +38,7 @@ h3::before {
   content: counter(suscripcionesSzpali) "." counter(seriesSzpali) "." counter(personajesSzpali) " ";
 }
 
-.generalSzpali div div, .generalSzpali div, .generalSzpali {
+.generalSzpali > div > div, .generalSzpali > div, .generalSzpali {
   display: flex;
   padding: 5px;
 }
@@ -47,12 +47,12 @@ h3::before {
   min-height: 400px;
   background-color: cyan;
 }
-.generalSzpali div {
+.generalSzpali > div {
   width: 50%;
   border: 2px solid black;
   background-color: #cecece;
 }
-.generalSzpali div div {
+.generalSzpali > div > div {
   justify-content: center;
   align-items: center;
   width: 33.3333333333%;

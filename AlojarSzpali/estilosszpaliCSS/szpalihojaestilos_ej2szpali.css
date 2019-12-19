@@ -1,0 +1,57 @@
+@media screen and (min-width: 500px) {
+  .generalSzpali > div {
+    width: 50%;
+    float: left;
+  }
+  .generalSzpali > .primeroSzpali {
+    border: 2px dashed cornflowerblue;
+    font-family: "Courier New", Courier, monospace;
+    color: rgba(255, 30, 143, 0.328);
+    text-align: left;
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+  .generalSzpali > .segundoSzpali {
+    border: 2px dashed #88f1ff;
+    font-family: "Courier New", Courier, monospace;
+    color: rgba(255, 30, 143, 0.328);
+    text-align: left;
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .generalSzpali > div {
+    width: 100%;
+    float: none;
+    border: 3px dotted #70ff70;
+    font-family: "Courier New", Courier, monospace;
+    color: rgba(255, 30, 143, 0.328);
+    text-align: left;
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+}
+.menuSzpali {
+  overflow: hidden;
+  background-color: cornflowerblue;
+}
+.menuSzpali > a {
+  float: left;
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+.menuSzpali > a:hover {
+  background-color: rgba(255, 105, 180, 0.335);
+}
+
+@media screen and (max-width: 450px) {
+  .menuSzpali a {
+    float: none;
+  }
+}
+
+/*# sourceMappingURL=szpalihojaestilos_ej2szpali.css.map */

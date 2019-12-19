@@ -52,13 +52,13 @@ h3::before {
     @extend %disposicionSzpali;
     background-color: cyan;
 
-    div {
+   > div {
         @extend %disposicionSzpali;
         @include anchoSzpali(2);
         @include bordesSzpali(black);
         background-color: rgb(206, 206, 206);
 
-        div {
+        >div {
             @extend %disposicionSzpali;
             justify-content: center;
             align-items: center;
