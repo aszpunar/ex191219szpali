@@ -1,0 +1,56 @@
+.btn--green, .btn--orange, .btn--blue, .btn > .btn__price, body {
+  color: white;
+}
+
+body {
+  font-family: "fira-sans-2", sans-serif;
+  background-color: #ccc;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 5px 10px 5px;
+}
+.btn > .btn__text {
+  padding: 0 10px 0 10px;
+  border-radius: 0 5px 5px 0;
+}
+.btn > .btn__price {
+  background-color: #333;
+  padding: 0 12px 0 12px;
+  margin-right: -10px;
+  font-weight: 600;
+  opacity: 0.4;
+  border-radius: 5px 0 0 5px;
+}
+
+.btn--big {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.btn--blue {
+  background-color: #0074D9;
+  border-color: #0074D9;
+}
+
+.btn--orange {
+  background-color: #FF4136;
+  border-color: #FF4136;
+}
+
+.btn--green {
+  background-color: #3D9970;
+  border-color: #3D9970;
+}
+
+/*# sourceMappingURL=optimizado.css.map */

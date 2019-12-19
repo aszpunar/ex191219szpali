@@ -1,0 +1,63 @@
+@mixin coloresSzpaliFondoBorde($colorFB) {
+    background-color: $colorFB;
+    border-color: $colorFB;
+}
+@mixin  borderRadioSzpali($a,$b,$c,$d) {
+    border-radius: $a $b $c $d;   
+}
+@mixin paddingSzpali($parriba,$pabajo,$right,$pleft) {
+    padding: $parriba $right $pabajo $pleft;
+}
+%colorFuenteSzpali {
+    color: white;
+}
+
+body {
+    font-family: "fira-sans-2", sans-serif;
+    background-color: #ccc;
+    @extend %colorFuenteSzpali;
+}
+.btn {
+    text-decoration: none;
+    background-color: white;
+    color: #888;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    @include paddingSzpali(10px, 10px, 5px,5px);
+    >.btn__text {
+        @include paddingSzpali(0, 0, 10px,10px);
+        @include borderRadioSzpali(0, 5px, 5px, 0);
+    }
+    >.btn__price {
+        //REPETITIVO background-color: white;
+        @extend %colorFuenteSzpali;
+        background-color: #333;
+        @include paddingSzpali(0, 0, 12px,12px);
+        margin-right: -10px;
+        font-weight: 600;
+        opacity: .4;
+        @include borderRadioSzpali(5px,0,0,5px);
+    }
+}
+.btn--big {
+    font-size: 28px;
+    padding: 10px;
+    font-weight: 400;
+}
+ .btn--blue {
+    @include coloresSzpaliFondoBorde(#0074D9);
+    @extend %colorFuenteSzpali;
+}
+ .btn--orange {
+    @include coloresSzpaliFondoBorde(#FF4136);
+    @extend %colorFuenteSzpali;
+
+}
+ .btn--green {
+    @include coloresSzpaliFondoBorde(#3D9970);
+    @extend %colorFuenteSzpali;
+}
