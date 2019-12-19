@@ -1,0 +1,6 @@
+.claseparcialSzpali{
+    border: 4px solid green;
+    margin-top: 50px;
+    /*El box-sizing no me haría falta porque en el SCSS principal he usado * para poner un box sizing a todo*/
+    box-sizing: border-box;
+}

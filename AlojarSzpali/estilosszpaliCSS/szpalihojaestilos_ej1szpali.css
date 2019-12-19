@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.claseparcialSzpali {
+  border: 4px solid green;
+  margin-top: 50px;
+  /*El box-sizing no me haría falta porque en el SCSS principal he usado * para poner un box sizing a todo*/
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  counter-reset: suscripcionesSzpali;
+}
+
+h1 {
+  counter-reset: seriesSzpali;
+}
+
+h1::before {
+  counter-increment: suscripcionesSzpali;
+  content: "Suscripción " counter(suscripcionesSzpali) ". ";
+}
+
+h2 {
+  counter-reset: personajesSzpali;
+}
+
+h2::before {
+  counter-increment: seriesSzpali;
+  content: counter(suscripcionesSzpali) "." counter(seriesSzpali) " ";
+}
+
+h3::before {
+  color: cornflowerblue;
+  counter-increment: personajesSzpali;
+  content: counter(suscripcionesSzpali) "." counter(seriesSzpali) "." counter(personajesSzpali) " ";
+}
+
+.generalSzpali div div, .generalSzpali div, .generalSzpali {
+  display: flex;
+  padding: 5px;
+}
+
+.generalSzpali {
+  min-height: 400px;
+  background-color: cyan;
+}
+.generalSzpali div {
+  width: 50%;
+  border: 2px solid black;
+  background-color: #cecece;
+}
+.generalSzpali div div {
+  justify-content: center;
+  align-items: center;
+  width: 33.3333333333%;
+  border: 2px solid lightcoral;
+  min-height: 300px;
+}
+
+/* Estilo del menú */
+.menuSzpali {
+  overflow: hidden;
+  background-color: cornflowerblue;
+}
+.menuSzpali > a {
+  float: left;
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+.menuSzpali > a:hover {
+  background-color: rgba(255, 105, 180, 0.335);
+}
+
+@media screen and (max-width: 450px) {
+  .menuSzpali a {
+    float: none;
+  }
+}
+
+/*# sourceMappingURL=szpalihojaestilos_ej1szpali.css.map */

@@ -1,0 +1,98 @@
+@import "parcial1szpali.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    counter-reset: suscripcionesSzpali;
+}
+
+h1 {
+    counter-reset: seriesSzpali;
+}
+
+h1::before {
+    counter-increment: suscripcionesSzpali;
+    content: "Suscripción "counter(suscripcionesSzpali) ". ";
+}
+
+h2 {
+    counter-reset: personajesSzpali;
+}
+
+h2::before {
+    counter-increment: seriesSzpali;
+    content: counter(suscripcionesSzpali) "."counter(seriesSzpali) " ";
+}
+
+h3::before {
+    color: cornflowerblue;
+    counter-increment: personajesSzpali;
+    content: counter(suscripcionesSzpali) "."counter(seriesSzpali) "."counter(personajesSzpali)" ";
+}
+
+//---------------------------
+
+%disposicionSzpali {
+    display: flex;
+    padding: 5px;
+}
+
+@mixin anchoSzpali ($cuantos) {
+    width: 1/$cuantos*100%;
+}
+
+@mixin bordesSzpali($color) {
+    border: 2px solid $color;
+}
+
+.generalSzpali {
+    min-height: 400px;
+    @extend %disposicionSzpali;
+    background-color: cyan;
+
+    div {
+        @extend %disposicionSzpali;
+        @include anchoSzpali(2);
+        @include bordesSzpali(black);
+        background-color: rgb(206, 206, 206);
+
+        div {
+            @extend %disposicionSzpali;
+            justify-content: center;
+            align-items: center;
+            @include anchoSzpali(3);
+            @include bordesSzpali(lightcoral);
+            min-height: 300px;
+        }
+    }
+}
+
+
+
+//EL MENU HORIZONTAL
+/* Estilo del menú */
+.menuSzpali {
+    overflow: hidden;
+    background-color: cornflowerblue;
+
+    >a {
+        float: left;
+        font-family: 'Courier New', Courier, monospace;
+        display: block;
+        padding: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    >a:hover {
+        background-color: rgba(255, 105, 180, 0.335);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .menuSzpali a {
+        float: none;
+    }
+}
